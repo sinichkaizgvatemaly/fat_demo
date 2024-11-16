@@ -1,0 +1,835 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+	font-style: normal;
+}
+
+:root {
+	--primary-color: #388E3C;  /* Темно-зеленый для основного цвета (менее яркий и более глубокий) */
+	--secondary-color: #FF5722;  /* Ярко-оранжевый, акцент на энергию и активность */
+	--disabled-color: #90A4AE;  /* Более нейтральный серый для отключенных элементов */
+	--text-color: #37474F;  /* Темно-серый с синим оттенком для лучшего контраста */
+	--text-color-white: #FFFFFF;  /* Белый для текста на темном фоне */
+	--border-radius: 6px;  /* Немного меньший радиус для более компактного вида */
+	--border-color: #B0BEC5;  /* Светлый серый бордер для мягкости */
+	--padding-button: 14px 28px;  /* Уменьшение отступов для более аккуратного внешнего вида */
+	--calendar-days-color: #E8F5E9;  /* Мягкий светло-зеленый для фона дней */
+	--button-color: #388E3C;  /* Темно-зеленый для основной кнопки */
+	--button-color-hover: #2C6B29;  /* Более темный зеленый для эффекта наведения */
+	--background-color: #FAFAFA;  /* Очень светлый фон для всех элементов */
+	--box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Меньшая тень для более легкого эффекта */
+	--input-padding: 12px 18px;  /* Меньше padding, чтобы сделать инпут компактнее */
+	--input-border-color: #B0BEC5;  /* Светло-серый бордер для инпута */
+	--input-bg-color: #F1F8E9;  /* Очень светлый зеленый для фона инпута */
+	--input-focus-border-color: #388E3C;  /* Темно-зеленый при фокусе */
+	--input-focus-box-shadow: 0px 0px 8px rgba(56, 142, 60, 0.2); /* Мягкая тень при фокусе */
+	--progress-bar-bg: #A5D6A7;  /* Мягкий светлый зеленый для прогресса */
+	--protein-bar-color: #FF5722;  /* Ярко-оранжевый для белков */
+	--fats-bar-color: #66BB6A;  /* Зеленый для жиров */
+	--carbs-bar-color: #29B6F6;  /* Голубой для углеводов */
+	--footer-bg: #388E3C;  /* Темно-зеленый фон подвала */
+	--footer-text-color: #FFFFFF;  /* Белый текст подвала */
+
+		/* Цвета для уведомлений */
+		--success-color: #4CAF50; /* Зеленый для успешных сообщений */
+		--error-color: #F44336;   /* Красный для ошибок */
+		--warning-color: #FF9800; /* Оранжевый для предупреждений */
+		--info-color: #2196F3;    /* Голубой для информационных сообщений */
+	
+		/* Дополнительные цвета */
+		--background-alt-color: #F5F5F5;  /* Альтернативный светлый фон */
+		--hover-overlay-color: rgba(0, 0, 0, 0.05);  /* Легкий черный оверлей при наведении */
+		--overlay-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный оверлей */
+	
+		/* Размеры и отступы */
+		--container-width: 1200px;  /* Ширина основного контейнера */
+		--content-padding: 20px;    /* Отступ для основного содержимого */
+		--header-height: 60px;      /* Высота заголовка */
+		--footer-height: 80px;      /* Высота подвала */
+	
+		/* Стили для анимаций */
+		--transition-duration: 0.3s;  /* Продолжительность переходов */
+		--transition-ease: ease-in-out;  /* Функция плавности для переходов */
+	
+		/* Стили для шрифтов */
+		--font-size-small: 12px;
+		--font-size-medium: 16px;
+		--font-size-large: 24px;
+		--font-family: Arial, sans-serif;
+	
+		/* Стили для теней и обводок */
+		--box-shadow-light: 0 1px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+		--box-shadow-dark: 0 4px 15px rgba(0, 0, 0, 0.3); /* Глубокая тень */
+		--border-width: 1px;  /* Ширина обводки */
+	
+		/* Радиусы и формы */
+		--border-radius-small: 4px;   /* Небольшой радиус */
+		--border-radius-large: 12px;  /* Большой радиус */
+	
+		/* Стили для карточек */
+		--card-padding: 16px;           /* Внутренний отступ для карточек */
+		--card-background: #FFFFFF;     /* Фон карточек */
+		--card-border-radius: 8px;      /* Радиус углов для карточек */
+		--card-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для карточек */
+	
+		/* Дополнительные стили для кнопок */
+		--button-font-size: 14px;          /* Размер шрифта для кнопок */
+		--button-border-radius: 6px;       /* Радиус углов кнопок */
+		--button-transition: all 0.2s ease; /* Переход для кнопок */
+	
+		/* Дополнительные стили для инпутов */
+		--input-font-size: 16px;            /* Размер шрифта для инпутов */
+		--input-border-radius: 4px;         /* Радиус углов для инпутов */
+		--input-focus-transition: all 0.3s ease; /* Переход для инпутов при фокусе */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================================================================= */
+
+/* ========================================================================================================= */
+.products-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column; /* Вертикальное расположение кнопок */
+	align-items: center; /* Центрирование кнопок по горизонтали */
+	gap: 10px; /* Отступ между кнопками */
+ }
+
+ 
+ .product-button {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--background-color); /* Использование переменной для фона */
+	border: 1px solid var(--border-color); /* Использование переменной для бордера */
+	border-radius: var(--border-radius); /* Использование переменной для скругления углов */
+	padding: var(--padding-button); /* Использование переменной для отступов */
+	width: 90%;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+ 
+.product-button:hover {
+	background-color: var(--button-color-hover); /* Использование переменной для фона при наведении */
+}
+ 
+ /* Стиль названия продукта */
+ .product-name {
+	font-size: 16px;
+	font-weight: bold;
+	color: var(--text-color); /* Использование переменной для цвета текста */
+}
+ 
+ /* Стиль информации о продукте */
+ .info-output {
+	font-size: 14px;
+	color: var(--text-color); /* Использование переменной для цвета текста */
+}
+ 
+ /* Кнопка удаления продукта */
+ .remove-btn {
+	background: transparent;
+	border: none;
+	color: #ff4d4d;
+	font-size: 18px;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+ 
+ .remove-btn:hover {
+	color: #ff0000;
+ }
+ 
+
+
+
+
+
+.first-section {
+	text-align: center;
+	margin: 0;
+	background: var(--primary-color);
+}
+
+#date-block {
+	font-size: 20px;
+	color: black;
+	display: inline-block;
+	transition: all 0.3s ease;
+}
+
+#date-block:hover {
+	transform: scale(1.05);
+}
+
+.calculator {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* main-section======================================================================================= */
+.main-section {
+	background-color: var(--background-color);
+}
+
+.main {
+	height: 74vmax;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Контейнер для продуктов */
+
+.calories {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 20px;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--border-color);
+	box-shadow: var(--box-shadow);
+	background-color: var(--background-color);
+	width: 100%;
+}
+
+.calories__total,
+.calories__percentage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.calories__label {
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.calories__value {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+
+		font-weight: 600;
+		text-align: right;
+		height: 30px;
+		width: 80px;
+	border-radius: var(--border-radius);
+	background-color: var(--primary-color);
+	color: var(--text-color-wiht-fone);
+	font-size: 1.2em;
+}
+
+
+
+
+
+.protein, .fats, .cabs {
+	width: 25%; /* Каждому элементу отведено по 30% ширины контейнера */
+	text-align: center; /* Выравнивание текста по центру */
+}
+
+.protein {
+	margin-left: 7%;
+}
+
+.cabs {
+	margin-right: 7%;
+}
+
+.proteinFatsCabs {
+	text-align: center;
+	margin: 0;
+	background: var(--primary-color);
+}
+
+.proteinFatsCabs .container {
+	margin: 20px auto;
+	color: white;
+	display: flex; /* Используем Flexbox для расположения элементов в ряд */
+	justify-content: space-between; /* Распределяем пространство между элементами */
+	align-items: center; /* Выравнивание по вертикали */
+}
+
+.proteinFatsCabs .container__text {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+/* progress bar */
+.progress-bar {
+	position: relative;
+	width: 100%;
+	height: 10px; /* Высота прогресс-бара */
+	background-color: #e0e0e0; /* Цвет фона прогресс-бара */
+	border-radius: var(--border-radius);
+}
+
+.progress-bar__line {
+	height: 100%;
+	width: 0;
+	border-radius: var(--border-radius);
+	transition: width 0.5s;
+}
+
+#progress-bar-proteins {
+	background-color: #4caf50; /* Зеленый для белков */
+}
+
+#progress-bar-fats {
+	background-color: #ff9800; /* Оранжевый для жиров */
+}
+
+#progress-bar-carbs {
+	background-color: #2196f3; /* Синий для углеводов */
+}
+
+.container__output {
+	text-align: center;
+	font-size: 16px;
+	color: white;
+}
+
+/* notebook======================================================================================= */
+.notebook__button {
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: var(--button-color);
+	color: white;
+	border: none;
+	border-radius: var(--border-radius);
+	transition: background-color 0.3s ease;
+}
+
+.notebook__button:hover {
+	background-color: var(--button-color-hover);
+}
+
+.notebook__section {
+	padding: 20px;
+	background-color: var(--background-color);
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	position: relative;
+	font-size: 16px;
+}
+
+.notebook__section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #ccc;
+}
+
+.notebook__section .content {
+	padding: 15px 0;
+	line-height: 1.6;
+}
+
+.notebook__section .timestamp {
+	font-size: 12px;
+	color: #888;
+	margin-top: 10px;
+	text-align: right;
+}
+
+/* Стиль для контейнера строки поиска */
+
+
+input[type="text"],
+input[type="number"] {
+	margin-bottom: 30px;
+	width: 100%;
+	max-width: 600px; /* Ограничение ширины */
+	padding: 12px 15px; /* Внутренние отступы */
+	font-size: 16px;
+	color: #333; /* Цвет текста */
+	background-color: var(--input-bg-color); /* Светлый фон */
+	border: 1px solid #d1d5db; /* Серый цвет рамки */
+	border-radius: var(--border-radius);
+	outline: none;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+}
+
+input[type="text"], input[type="number"]:focus {
+	border-color: #3b82f6; /* Синий цвет рамки при фокусе */
+	box-shadow: 0px 0px 8px rgba(59, 130, 246, 0.3); /* Голубая тень */
+}
+
+/* Округлые кнопки отправки */
+button.send-button {
+	padding: 10px 18px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #ffffff;
+	background-color: #3b82f6;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+
+
+/* product======================================================================================= */
+/* Стили для блока с продуктом */
+.product-block {
+	margin: 20px 0;
+	padding: 15px;
+	background-color: transparent;
+	color: var(--disabled-color);
+}
+
+/* Заголовок продукта */
+.product-block h3 {
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* Описание продуктов */
+.product-block p {
+	margin: 5px 0;
+	font-size: 14px;
+}
+
+/* foter======================================================================================= */
+.footer {
+	background-color: var(--primary-color);  /* Светлый голубой фон */
+	color: var(--text-color);
+	padding: 10px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);  /* Тень сверху */
+}
+
+.footer__buttons {
+	display: flex;
+	justify-content: space-around;
+}
+
+.footer__button img {
+	width: 30px;
+	height: 30px;
+}
+
+.footer__button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer__button span {
+	font-size: 12px;
+}
+
+.footer__button:hover {
+	background-color: var(--footer-button-hover);
+}
+
+footer p {
+	font-size: 14px;
+	color: var(--text-color);
+}
+
+footer a {
+	color: var(--text-color);
+	text-decoration: underline;
+}
+
+
+/* foter======================================================================================= */
+
+
+.button {
+	padding: var(--padding-button);
+	font-size: 16px;
+	color: var(--text-color);
+	background-color: var(--button-color);
+	border: none;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.button:hover {
+	background-color: var(--button-color-hover);
+}
+
+.button:focus {
+	outline: none;
+}
+
+/* ========================================================== */
+/* Стили для блока с вводом */
+.amount {
+	margin: 10px 0;
+	display: flex;
+	align-items: center;
+}
+
+/* Стили для input (ввод числа) */
+.amount__input {
+	padding: 8px;
+	font-size: 16px;
+	width: 50%;
+	border: 1px solid var(--input-bg-color);
+	border-radius: var(--border-radius);
+}
+.amount__input--small {
+	font-size: 14px;
+	width: 30%;
+}
+
+/* Стили для select (выбор единицы измерения) */
+.amount__select {
+	padding: 8px;
+	font-size: 16px;
+	border: 1px solid var(--input-bg-color);
+	border-radius: var(--border-radius);
+	margin-left: 10px;  /* Отступ между инпутом и select */
+}
+
+/* Модификатор для маленького select */
+.amount__select--small {
+	font-size: 14px;
+	width: 30%;
+}
+
+/* foter======================================================================================= */
+
+
+.wraper {
+	margin: 0;
+	max-width: 100%;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	height: 100%;
+}
+
+/* Header */
+.header {
+	background-color: var(--background-color);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.first-section {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#date-block {
+	font-size: 18px;
+	font-weight: bold;
+	color: var(--primary-color);
+}
+
+/* Календарь */
+.calendar {
+	margin-top: 20px;
+	background-color: var(--background-color);
+	padding: 20px;
+	box-shadow: var(--box-shadow);
+	border-radius: var(--border-radius);
+}
+
+.calendar__header {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.calendar__month {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.calendar__month button {
+	background: none;
+	border: none;
+	font-size: 24px;
+	color: var(--primary-color);
+	cursor: pointer;
+	padding: 0 15px;
+}
+
+.calendar__month span {
+	font-size: 22px;
+	margin: 0 10px;
+	color: var(--primary-color);
+}
+
+.calendar__days {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 7px;
+	margin-top: 20px;
+}
+
+.calendar__day {
+	color: var(--disabled-color);
+	background-color: var(--calendar-days-color);
+	padding: 15px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 16px;
+}
+
+.calendar__day button {
+	width: 100%;
+	height: 100%;
+	background: none;
+	border: none;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+	padding: 0;
+	border-radius: 50%;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.calendar__day.today button {
+	background-color: #00BFFF;
+	color: white;
+}
+
+.calendar__day button:hover {
+	background-color: var(--background-color-button-hover);
+	color: var(--primary-color);
+}
+
+.calendar__day.today button:hover {
+	background-color: #007ACC;
+	color: white;
+}
+
+/* Контролы календаря */
+.calendar__controls {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.calendar__controls .button {
+	background-color: var(--button-color);
+	color: var(--text-color);
+	border: none;
+	padding: var(--padding-button);
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.calendar__controls .button:hover {
+	background-color: var(--button-color-hover);
+}
+
+#searchResults {
+	position: absolute; /* Чтобы результаты отображались под полем ввода */
+	top: 0; /* Позиционирование под полем ввода */
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для подсказок */
+	max-height: 300px;
+	overflow-y: auto; /* Прокрутка при длинных списках */
+	z-index: 1000; /* Высокий z-index для отображения поверх других элементов */
+	display: none; /* Изначально скрыто */
+	border-radius: 8px; /* Скругленные углы */
+}
+
+.search-result-item {
+	padding: 10px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.search-result-item:hover {
+	background-color: #f0f0f0; /* Цвет при наведении */
+}
+
+.search-result-item a {
+	text-decoration: none;
+	color: #333; /* Цвет текста */
+}
+
+.search-result-item a:hover {
+	text-decoration: underline; /* Подчёркивание ссылки при наведении */
+}
+
+/* Стиль для пустых результатов */
+#searchResults p {
+	padding: 10px;
+	font-size: 14px;
+	color: #888;
+	margin: 0;
+}
+
+
+
+
+/* Стили для ссылок */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Стили для кнопок */
+button {
+	font-family: inherit;
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+select {
+	padding: 10px;
+	font-size: 16px;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--border-color);
+}
+
+
+/* foter======================================================================================= */
+.search-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+ }
+ 
+ .input-wrapper {
+	position: relative;
+	flex-grow: 1; /* Поле ввода занимает все доступное пространство */
+ }
+ 
+ .search-input {
+
+
+
+ /* Обеспечивает растягивание на всю ширину доступного пространства */
+	padding-left: 10px;
+	border: 1px solid #ccc; /* Обводка */
+	border-radius: 5px; /* Скругленные углы */
+ }
+ 
+ .clear-btn {
+	position: absolute;
+	right: 10px; /* Позиционируем крестик от правого края */
+	top: 50%;
+	transform: translateY(-50%); /* Центрируем крестик по вертикали */
+	cursor: pointer;
+	font-size: 18px;
+	color: #888;
+ }
+ 
+ .clear-btn:hover {
+	color: #333;
+ }
+ 
+ .search-button {
+	padding: 8px 16px;
+	margin-left: 10px; /* Расстояние между полем ввода и кнопкой */
+	border: none;
+	background-color: #4CAF50;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 16px;
+	
+	/* Обнуление возможных отступов или внутренних отступов */
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-align: middle; /* выравнивание по центру */
+ }
+ 
+ .search-button:hover {
+	background-color: #45a049;
+ }
+ 
+ 
+ 
+
+
+
+/* foter======================================================================================= */
+/* foter======================================================================================= */
+/* foter======================================================================================= */
+
+
+
+
+
+
+
+

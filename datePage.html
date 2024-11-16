@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дата Страница</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="wrapper">
+		<section class="first-section">
+			<div id="date-block"></div>
+	  </section>
+
+        <section class="main-section">
+			<button class="button" onclick="window.history.back()">Назад</button>
+            <div class="result-block">
+                <h2 id="dateTitle">История</h2>
+                <div id="dateInfo">
+                    <!-- Динамическое содержимое -->
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer__buttons">
+                <a class="footer__button" id="calendarLink" href="calendar.html">
+                    <img src="img/calendar.webp" alt="Календарь">
+                </a>
+                <a class="footer__button" id="settingsLink" href="settings.html">
+                    <img src="img/setings.webp" alt="Настройки">
+                </a>
+                <a class="footer__button" id="homeLink" href="home.html">
+                    <img src="img/home.webp" alt="Главная">
+                </a>
+                <a class="footer__button" id="addLink" href="addFood.html">
+                    <img src="img/add-food.webp" alt="Добавить продукт">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+	 <script src="js/time.js"></script>
+    <script src="js/datePage.js"></script>
+</body>
+</html>
